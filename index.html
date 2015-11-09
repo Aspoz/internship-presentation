@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Internship Presentation</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:800,300,400">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/aspoz.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<div class="info-card">
+						<div class="info-card__img">
+							<img class="plain" src="https://pbs.twimg.com/profile_images/633653154047897601/8AA50wdD.jpg" alt="Sander Tuin">
+						</div>
+						<div class="info-card__text">
+							<p>
+								Sander Tuin <br>
+								<a href="https://twitter.com/sandertuin">@SanderTuin</a> <br>
+								<a href="https://github.com/Aspoz">github.com/Aspoz</a>
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<img src="img/HackerOne.png" alt="" class="plain">
+				</section>
+
+				<section>
+					<h1>What is HackerOne?</h1>
+				</section>
+
+				<section data-background="#000" data-transition="fade">
+					<iframe class="stretch" width="853" height="480" src="https://www.youtube-nocookie.com/embed/1T6GSa0qPNk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				</section>
+
+				<section>
+					<h1>rP (Payments)</h1>
+				</section>
+
+				<section data-background="#2b2b2b" data-transition="fade">
+					<iframe class="stretch" src="//giphy.com/embed/5fBH6zoAQg9dHK2ttsc?html5=true" width="480" height="336" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+				</section>
+
+				<section data-background="#3f3f3f">
+					<p>Lots of stuff TODO:</p>
+					<pre style="font-size: 14px; width: 100%;"><code class="bash" data-trim>
+app/backend/interactors/admins/authenticate.rb:12:  # TODO: refactor to query
+app/backend/interactors/payments/create.rb:39:  # TODO: check for API tokens in pavlov_options
+app/backend/interactors/payout_batches/add_payout.rb:26:  # TODO: check for API tokens in pavlov_options
+app/backend/interactors/payout_batches/create.rb:32:  # TODO: check for API tokens in pavlov_options
+app/backend/interactors/payout_batches/remove_payout.rb:26:  # TODO: check for API tokens in pavlov_options
+app/backend/interactors/payouts/cancel.rb:24:  # TODO: check for API tokens in pavlov_options
+app/backend/interactors/payouts/confirm.rb:22:  # TODO: check for API tokens in pavlov_options
+app/backend/interactors/payouts/create.rb:47:  # TODO: check for API tokens in pavlov_options
+app/backend/interactors/payouts/reject.rb:22:  # TODO: check for API tokens in pavlov_options
+app/backend/interactors/tax_forms/create.rb:30:  # TODO: validate flow in %w{manual hacker_one docu_sign}
+app/backend/interactors/tax_forms/create.rb:31:  # TODO: validate form_type in %w{W-9 W-8BEN}
+app/backend/interactors/tax_forms/create.rb:35:  # TODO: check for API tokens in pavlov_options
+app/backend/interactors/tax_forms/update_status_to_needs_review.rb:30:  # TODO: add authorization check when T602 is implemented.
+app/controllers/administration/payments_controller.rb:24:  # TODO: move logic to interactor
+app/controllers/administration/payouts_controller.rb:65:  # TODO: do we want to render flash messages
+app/models/payout.rb:85:  # TODO: refactor this code to User#current_tax_form_status when we
+config/routes.rb:70:  # TODO: change to admin#index when we have an admin dashboard
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>Implementing Stronger Parameters</h1>
+					<a href="https://github.com/zendesk/stronger_parameters">github.com/zendesk/stronger_parameters</a>
+				</section>
+
+				<section data-transition="fade">
+					<p>Wireframing</p>
+					<img src="img/wireframe-payouts.png" alt="">
+				</section>
+
+				<section data-transition="fade">
+					<img class="plain" src="img/rp-dashboard.png" alt="rP dashboard">
+				</section>
+
+				<section>
+					<h1>What did I learn so far?</h1>
+					<ul>
+						<p class="fragment">You never have enough specs</p>
+						<p class="fragment">Always let others review your code</p>
+						<p class="fragment">It is okay if something breaks</p>
+						<p class="fragment">Enforce linters and styleguides</p>
+						<p class="fragment">Having total freedom can be hard</p>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Questions?</h1>
+					<p>&nbsp;</p>
+					<div class="info-card">
+						<div class="info-card__img">
+							<img class="plain" src="https://pbs.twimg.com/profile_images/633653154047897601/8AA50wdD.jpg" alt="Sander Tuin">
+						</div>
+						<div class="info-card__text">
+							<p>
+								Sander Tuin <br>
+								<a href="https://twitter.com/sandertuin">@SanderTuin</a> <br>
+								<a href="https://github.com/Aspoz">github.com/Aspoz</a>
+							</p>
+						</div>
+					</div>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				history: true,
+				center: true,
+
+				margin: 0,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
